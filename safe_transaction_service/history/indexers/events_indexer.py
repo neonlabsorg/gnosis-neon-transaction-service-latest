@@ -122,7 +122,8 @@ class EventsIndexer(EthereumIndexer):
             "toBlock": to_block_number,
             "topics": [filter_topics],
         }
-
+        # Debug log
+        logger.debug(f"Filter parameters:{parameters}") 
         if not self.IGNORE_ADDRESSES_ON_LOG_FILTER:
             # Search logs only for the provided addresses
             if self.query_chunk_size:
