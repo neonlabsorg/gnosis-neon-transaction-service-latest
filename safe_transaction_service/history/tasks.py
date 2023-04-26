@@ -87,7 +87,7 @@ def check_sync_status_task() -> bool:
     soft_time_limit=SOFT_TIMEOUT,
     time_limit=LOCK_TIMEOUT,
     autoretry_for=(IndexingException, IOError),
-    default_retry_delay=15,
+    default_retry_delay=1,
     retry_kwargs={"max_retries": 3},
 )
 def index_erc20_events_task(self) -> Optional[Tuple[int, int]]:
@@ -171,7 +171,7 @@ def index_erc20_events_out_of_sync_task(
     soft_time_limit=SOFT_TIMEOUT,
     time_limit=LOCK_TIMEOUT,
     autoretry_for=(IndexingException, IOError),
-    default_retry_delay=15,
+    default_retry_delay=1,
     retry_kwargs={"max_retries": 3},
 )
 def index_internal_txs_task(self) -> Optional[Tuple[int, int]]:
@@ -199,7 +199,7 @@ def index_internal_txs_task(self) -> Optional[Tuple[int, int]]:
     soft_time_limit=SOFT_TIMEOUT,
     time_limit=LOCK_TIMEOUT,
     autoretry_for=(IndexingException, IOError),
-    default_retry_delay=15,
+    default_retry_delay=1,
     retry_kwargs={"max_retries": 3},
 )
 def index_new_proxies_task(self) -> Optional[Tuple[int, int]]:
@@ -222,7 +222,7 @@ def index_new_proxies_task(self) -> Optional[Tuple[int, int]]:
     soft_time_limit=SOFT_TIMEOUT,
     time_limit=LOCK_TIMEOUT,
     autoretry_for=(IndexingException, IOError),
-    default_retry_delay=15,
+    default_retry_delay=1,
     retry_kwargs={"max_retries": 3},
 )
 def index_safe_events_task(self) -> Optional[Tuple[int, int]]:
