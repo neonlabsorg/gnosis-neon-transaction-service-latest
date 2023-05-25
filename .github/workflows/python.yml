@@ -94,7 +94,6 @@ jobs:
   docker-deploy:
     runs-on: ubuntu-latest
     needs:
-      - linting
       - test-app
     if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop' || (github.event_name == 'release' && github.event.action == 'released')
     steps:
