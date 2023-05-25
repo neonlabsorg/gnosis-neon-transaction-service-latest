@@ -115,7 +115,7 @@ jobs:
         context: .
         file: docker/web/Dockerfile
         push: true
-        tags: safeglobal/safe-transaction-service:staging
+        tags: neonlabsorg/gnosis-neon-transaction-service:staging
         platforms: |
           linux/amd64
           linux/arm64
@@ -128,7 +128,7 @@ jobs:
         context: .
         file: docker/web/Dockerfile
         push: true
-        tags: safeglobal/safe-transaction-service:develop
+        tags: neonlabsorg/safe-transaction-service:develop
         platforms: |
           linux/amd64
           linux/arm64
@@ -142,8 +142,8 @@ jobs:
         file: docker/web/Dockerfile
         push: true
         tags: |
-          safeglobal/safe-transaction-service:${{ github.event.release.tag_name }}
-          safeglobal/safe-transaction-service:latest
+          neonlabsorg/gnosis-neon-transaction-service:${{ github.event.release.tag_name }}
+          neonlabsorg/gnosis-neon-transaction-service:latest
         platforms: |
           linux/amd64
           linux/arm64
